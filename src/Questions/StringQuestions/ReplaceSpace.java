@@ -1,8 +1,7 @@
-package Questions;
+package Questions.StringQuestions;
 
-import java.util.Arrays;
 
-public class StringQuestions {
+public class ReplaceSpace {
 
 
     /*
@@ -55,6 +54,7 @@ public class StringQuestions {
 
     /**
      * Replace all spaces in the input StringBuffer by "%20"
+     *
      * @param str string contains space that need replaced by "%20"
      * @return the string after replaced
      */
