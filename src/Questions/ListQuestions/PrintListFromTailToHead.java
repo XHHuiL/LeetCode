@@ -9,10 +9,10 @@ public class PrintListFromTailToHead {
 
     /*
      * test case 1: input null reference
-     * expect: return null
+     * expect: return empty ArrayList
      * */
     private static void testCase_NullReference() {
-        assert printListFromTailToHead(null) == null;
+        assert printListFromTailToHead(null).isEmpty();
         System.out.println("Pass: testCase_NullReference");
     }
 
@@ -61,7 +61,7 @@ public class PrintListFromTailToHead {
     public static ArrayList<Integer> printListFromTailToHead(ListNode head) {
         // step 1: filter input
         if (head == null)
-            return null;
+            return new ArrayList<Integer>();
 
         // step 2: traverse the list and record value
         Stack<Integer> stack = new Stack<>();
