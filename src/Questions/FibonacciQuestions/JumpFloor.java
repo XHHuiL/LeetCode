@@ -34,7 +34,7 @@ public class JumpFloor {
     public static int jumpFloorAbnormally(int target){
         // attention: we can get this formula: f(n) = f(n-1) + f(n-2) + ... + f(1) easily
         // attention: and we can see f(n-1) = f(n-2) + ... + f(1), so f(n) = 2f(n-1)
-        // attention: due f(1) = 1, so f(n) = 2^(n-1), the question is calculate 2^(n-1)
+        // attention: due f(1) = 1, so f(n) = 2^(n-1), the question is to calculate 2^(n-1)
         if (target < 1)
             return 0;
         return powPositiveExponent(2, target-1);
