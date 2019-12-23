@@ -1,4 +1,4 @@
-package Questions.ListQuestions;
+package Question.ListQuestion;
 
 import Structures.List.ListNode;
 

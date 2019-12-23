@@ -1,4 +1,4 @@
-package Questions.StackQuestions;
+package Question.StackQuestion;
 
 import java.util.NoSuchElementException;
 import java.util.Stack;

@@ -1,4 +1,4 @@
-package Questions.TreeQuestions;
+package Question.TreeQuestion;
 
 import Structures.Tree.BinaryTreeNodeWithPointerToParent;
 

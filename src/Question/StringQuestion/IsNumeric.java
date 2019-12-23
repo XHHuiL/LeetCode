@@ -1,4 +1,4 @@
-package Questions.StringQuestions;
+package Question.StringQuestion;
 
 public class IsNumeric {
     private static int index = 0;

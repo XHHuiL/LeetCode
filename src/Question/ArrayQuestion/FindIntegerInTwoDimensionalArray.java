@@ -1,4 +1,4 @@
-package Questions.ArrayQuestions;
+package Question.ArrayQuestion;
 
 public class FindIntegerInTwoDimensionalArray {
 

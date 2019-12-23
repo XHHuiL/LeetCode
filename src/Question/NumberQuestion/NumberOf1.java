@@ -1,4 +1,4 @@
-package Questions.NumberQuestions;
+package Question.NumberQuestion;
 
 public class NumberOf1 {
 

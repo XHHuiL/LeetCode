@@ -1,6 +1,5 @@
-package Questions.MatrixQuestions;
+package Question.MatrixQuestion;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class PrintMatrix {

@@ -1,4 +1,4 @@
-package Questions.FibonacciQuestions;
+package Question.FibonacciQuestion;
 
 public class JumpFloor {
 
