@@ -139,4 +139,123 @@ public class SortUtil {
         quickSortHelper(array, position + 1, end);
     }
 
+    /*
+     * Select Sort: select the smallest element from the remains, and put it at the end of sorted sub array
+     * Contains: SimpleSelectSort, HeapSort
+     * */
+
+    public static void simpleSelectSort(int[] array) {
+        if (array == null || array.length == 0)
+            return;
+        int length = array.length;
+        for (int i = 0; i < length; i++) {
+            int min = array[i];
+            int index = i;
+            // step 1: get the smallest element from the remains
+            for (int j = i + 1; j < length; j++) {
+                if (array[j] < min) {
+                    min = array[j];
+                    index = j;
+                }
+            }
+            // step 2; swap
+            array[index] = array[i];
+            array[i] = min;
+        }
+    }
+
+    public static void heapSort(int[] array) {
+        if (array == null || array.length == 0)
+            return;
+        int length = array.length;
+
+        // step 1: construct a maximum heap
+        constructMaximumHeap(array, length);
+
+        // step 2: swap the root of maximum heap to the end and adjust the maximum heap
+        for (int i = length - 1; i > 0; i--) {
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
+            adjustDown(array, 0, i);
+        }
+
+    }
+
+    private static void constructMaximumHeap(int[] array, int length) {
+        for (int i = length >> 1; i >= 0; i--) {
+            adjustDown(array, i, length);
+        }
+    }
+
+    /*
+     * place the element at index in the correct position
+     * */
+    private static void adjustDown(int[] array, int index, int length) {
+        int value = array[index];
+        // start from this element's first child
+        for (int i = (index << 1) + 1; i < length; i = (i << 1) + 1) {
+            // get the bigger child
+            if (i < length - 1 && array[i] < array[i + 1])
+                i++;
+            // if parent is bigger than the big child, break directly
+            if (value > array[i])
+                break;
+                // else, swap and update the input element's index
+            else {
+                array[index] = array[i];
+                array[i] = value;
+                index = i;
+            }
+        }
+    }
+
+    /*
+     * Merge Sort: sort array by merging two sorted sub sequences
+     * */
+
+    public static void mergeSort(int[] array) {
+        if (array == null || array.length == 0)
+            return;
+        mergeSortHelper(array, 0, array.length - 1);
+    }
+
+    private static void mergeSortHelper(int[] array, int start, int end) {
+        if (start >= end)
+            return;
+        int mid = (start + end) >> 1;
+
+        // step 1: sort the left part and right part
+        mergeSortHelper(array, start, mid);
+        mergeSortHelper(array, mid + 1, end);
+
+        // step 2: merge
+        merge(array, start, mid, end);
+    }
+
+    private static void merge(int[] array, int start, int mid, int end) {
+        int[] temp = new int[end - start + 1];
+        int index = 0;
+        int i = start;
+        int j = mid + 1;
+        while (i <= mid && j <= end) {
+            if (array[i] <= array[j])
+                temp[index++] = array[i++];
+            else
+                temp[index++] = array[j++];
+        }
+        // attention: remember copy the remains
+        while (i <= mid)
+            temp[index++] = array[i++];
+        while (j <= end)
+            temp[index++] = array[j++];
+
+        // copy
+        if (index >= 0) System.arraycopy(temp, 0, array, start, index);
+    }
+
+    // todo implement radix sort
+    public static void radixSort(int[] array){
+
+    }
 }

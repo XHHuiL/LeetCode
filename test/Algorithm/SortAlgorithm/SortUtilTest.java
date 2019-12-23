@@ -115,4 +115,64 @@ public class SortUtilTest {
         SortUtil.quickSort(duplicateArray);
         Assert.assertArrayEquals(duplicateArray, target);
     }
+
+    @Test
+    public void testSimpleSelectSort(){
+        int[] target = new int[]{1, 2, 3, 4, 5};
+
+        // test case 1: increasing array
+        int[] increasingArray = new int[]{1, 2, 3, 4, 5};
+        SortUtil.simpleSelectSort(increasingArray);
+        Assert.assertArrayEquals(increasingArray, target);
+
+        // test case 2: decreasing array
+        int[] decreasingArray = new int[]{5, 4, 3, 2, 1};
+        SortUtil.simpleSelectSort(decreasingArray);
+        Assert.assertArrayEquals(decreasingArray, target);
+
+        // test case 3: normal array
+        int[] normalArray = new int[]{4, 2, 3, 1, 5};
+        SortUtil.simpleSelectSort(normalArray);
+        Assert.assertArrayEquals(normalArray, target);
+    }
+
+    @Test
+    public void testHeapSort(){
+        int[] target = new int[]{1, 2, 3, 4, 5};
+
+        // test case 1: increasing array
+        int[] increasingArray = new int[]{1, 2, 3, 4, 5};
+        SortUtil.heapSort(increasingArray);
+        Assert.assertArrayEquals(increasingArray, target);
+
+        // test case 2: decreasing array
+        int[] decreasingArray = new int[]{5, 4, 3, 2, 1};
+        SortUtil.heapSort(decreasingArray);
+        Assert.assertArrayEquals(decreasingArray, target);
+
+        // test case 3: normal array
+        int[] normalArray = new int[]{4, 2, 3, 1, 5};
+        SortUtil.heapSort(normalArray);
+        Assert.assertArrayEquals(normalArray, target);
+    }
+
+    @Test
+    public void testMergeSort(){
+        int[] target = new int[]{1, 2, 3, 4, 5};
+
+        // test case 1: increasing array
+        int[] increasingArray = new int[]{1, 2, 3, 4, 5};
+        SortUtil.mergeSort(increasingArray);
+        Assert.assertArrayEquals(increasingArray, target);
+
+        // test case 2: decreasing array
+        int[] decreasingArray = new int[]{5, 4, 3, 2, 1};
+        SortUtil.mergeSort(decreasingArray);
+        Assert.assertArrayEquals(decreasingArray, target);
+
+        // test case 3: normal array
+        int[] normalArray = new int[]{4, 2, 3, 1, 5};
+        SortUtil.mergeSort(normalArray);
+        Assert.assertArrayEquals(normalArray, target);
+    }
 }
