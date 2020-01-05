@@ -5,13 +5,11 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-import static org.junit.Assert.*;
-
 public class BitMapSortTest {
 
     @Test
     public void testSort() throws IOException {
-        RandomNumberGenerator.generateNonRepetitivePositiveNumber("data/bitmap.in", 200000);
-        BitMapSort.sort("data/bitmap.in", "data/bitmap.out", 200000, 100000);
+        RandomNumberGenerator.generateNonRepetitivePositiveNumber("data/bitmap/in", 200000);
+        BitMapSort.sort("data/bitmap/in", "data/bitmap/out", 200000, 100000);
     }
 }
