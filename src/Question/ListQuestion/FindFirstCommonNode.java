@@ -23,14 +23,14 @@ public class FindFirstCommonNode {
             shorter = pHead1;
         }
         for (int i = 0; i < Math.abs(length1 - length2); i++) {
-            longer = longer.getNextNode();
+            longer = longer.getNext();
         }
 
         while (longer != null) {
             if (longer == shorter)
                 return longer;
-            longer = longer.getNextNode();
-            shorter = shorter.getNextNode();
+            longer = longer.getNext();
+            shorter = shorter.getNext();
         }
 
         return null;
@@ -41,7 +41,7 @@ public class FindFirstCommonNode {
         int length = 0;
         while (cur != null) {
             length++;
-            cur = cur.getNextNode();
+            cur = cur.getNext();
         }
         return length;
     }

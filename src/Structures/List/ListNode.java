@@ -2,26 +2,26 @@ package Structures.List;
 
 public class ListNode {
 
-    private int value;
-    private ListNode nextNode = null;
+    public int val;
+    public ListNode next = null;
 
     public ListNode(int value) {
-        this.value = value;
+        this.val = value;
     }
 
-    public int getValue() {
-        return value;
+    public int getVal() {
+        return val;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setVal(int val) {
+        this.val = val;
     }
 
-    public ListNode getNextNode() {
-        return nextNode;
+    public ListNode getNext() {
+        return next;
     }
 
-    public void setNextNode(ListNode nextNode) {
-        this.nextNode = nextNode;
+    public void setNext(ListNode next) {
+        this.next = next;
     }
 }

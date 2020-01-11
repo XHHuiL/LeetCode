@@ -15,13 +15,13 @@ public class ReverseList {
         // attention: implement this function by traversing this list with tree pointers: pre, cur, next
         ListNode pre = null;
         ListNode cur = head;
-        while (cur.getNextNode() != null){
-            ListNode next = cur.getNextNode();
-            cur.setNextNode(pre);
+        while (cur.getNext() != null){
+            ListNode next = cur.getNext();
+            cur.setNext(pre);
             pre = cur;
             cur = next;
         }
-        cur.setNextNode(pre);
+        cur.setNext(pre);
         return cur;
     }
 

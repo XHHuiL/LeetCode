@@ -16,12 +16,12 @@ public class MergeTwoSortedList {
         if (node2 == null)
             return node1;
         ListNode head;
-        if (node1.getValue() <= node2.getValue()) {
+        if (node1.getVal() <= node2.getVal()) {
             head = node1;
-            head.setNextNode(merge(node1.getNextNode(), node2));
+            head.setNext(merge(node1.getNext(), node2));
         } else {
             head = node2;
-            head.setNextNode(merge(node1, node2.getNextNode()));
+            head.setNext(merge(node1, node2.getNext()));
         }
         return head;
     }

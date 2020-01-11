@@ -37,9 +37,9 @@ public class PrintListFromTailToHead {
         ListNode node2 = new ListNode(2);
         ListNode node3 = new ListNode(3);
         ListNode node4 = new ListNode(4);
-        node1.setNextNode(node2);
-        node2.setNextNode(node3);
-        node3.setNextNode(node4);
+        node1.setNext(node2);
+        node2.setNext(node3);
+        node3.setNext(node4);
         ArrayList<Integer> list = printListFromTailToHead(node1);
         assert list != null;
         assert list.size() == 4;
@@ -66,8 +66,8 @@ public class PrintListFromTailToHead {
         // step 2: traverse the list and record value
         Stack<Integer> stack = new Stack<>();
         while (head != null){
-            stack.push(head.getValue());
-            head = head.getNextNode();
+            stack.push(head.getVal());
+            head = head.getNext();
         }
 
         // step 3: reverse values
